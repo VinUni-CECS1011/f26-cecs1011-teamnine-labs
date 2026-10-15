@@ -1,0 +1,16 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+node_modules/
+
+# Local-only or sensitive material; use approved storage outside Git.
+private/
+local/
+.DS_Store
+Thumbs.db
