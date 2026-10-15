@@ -6,8 +6,8 @@ Instructions: [course website](https://vinuni-cecs1011.github.io/) and [Lab 1 st
 
 ## Team introduction
 
-- Team name:
-- GitHub usernames and disciplines (up to six members):
+- Team name: Team 9
+- GitHub usernames and disciplines (up to six members): 
 - Initial problem observation:
 
 ## Start here
