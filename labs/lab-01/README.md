@@ -3,7 +3,7 @@
 - Team name: Team 9
 - GitHub usernames: caocchinh (CS), DUCDUCDUC38 (EE), bfhvn (DS), phamvuminh080908 (EE)
 
-Report progress: Tasks 1 and 2 documented; remaining sections pending.
+Report progress: Tasks 1–5 documented; remaining sections pending.
 
 ## Part 1: Meet the tools and the sensor
 
@@ -51,23 +51,44 @@ _Photo 3. Shading the LDR with a hand increases its measured resistance to 53.42
 ### Task 3. Set up the power supply
 
 - Supply setting: 5 V; current limit: 0.01 A (10 mA).
-- Measured supply voltage, Vs (V):
+- Supply voltage, Vs: 5 V.
 
 ### Task 4. Build a voltage divider
 
-**Insert your photo here:** your own circuit, labelled to identify +5 V, Vout and GND. Add a caption explaining these connections and note any correction made before powering the circuit.
+We connected the fixed resistor and LDR in series on the breadboard to build a voltage divider.
+
+![Our breadboard voltage divider labelled with +5 V, Vout and GND](evidence/potential-divider.jpg)
+
+_Photo 4. The purple wire supplies +5 V to the fixed resistor. The red measurement clip connects to Vout, where the fixed resistor meets the LDR. The other side of the LDR connects to GND through the blue wire. The black measurement clip connects to the same GND reference._
+
+- **Corrections before powering:** No wiring corrections were needed.
 
 ### Task 5. Measure the output voltage
 
-Use the fixed resistance from Task 1, the LDR resistances from Task 2 and the supply voltage from Task 3. Calculate Vout = Vs × Rphoto / (Rs + Rphoto), using the same units for both resistances. Show one calculation with your measured values.
+We set the multimeter to DC voltage and connected the red lead to Vout and the black lead to GND. We measured the output with the LDR exposed to room lighting, then covered with a hand.
 
-| Condition and method | LDR resistance (kΩ) | Calculated output (V) | Measured output (V) |
-| -------------------- | ------------------- | --------------------- | ------------------- |
-| Exposed:             |                     |                       |                     |
-| Covered:             |                     |                       |                     |
+We used the measured fixed resistance, **Rs = 9.9595 kΩ**, the LDR resistances from Task 2 and the supply voltage, **Vs = 5 V**, from Task 3.
 
-- Explanation of the observed change in Vout:
-- Comparison of calculated and measured output; one difference or limitation:
+Using `Vout = Vs × Rphoto / (Rs + Rphoto)`, the exposed calculation is:
+
+`Vout = 5 × 12.974 / (9.9595 + 12.974) = 2.8286 V`
+
+| Condition and method | LDR resistance from Task 2 (kΩ) | Calculated output (V) | Measured output (V) |
+| --- | --- | --- | --- |
+| Exposed to room lighting | 12.974 | 2.8286 | 2.5686 |
+| Covered with a hand | 53.421 | 4.2143 | 4.6598 |
+
+Covering the LDR increased Vout from **2.5686 V to 4.6598 V**, matching our prediction. Blocking light increases the LDR's resistance, which raises the output voltage in this circuit.
+
+The measured output was lower than calculated when exposed and higher when covered. Room lighting or hand coverage may have differed from Task 2, changing the LDR's resistance between measurements.
+
+![Exposed voltage-divider output with the multimeter displaying 2.5686 V DC](evidence/potentialdivider-exposed.jpg)
+
+_Photo 5. With the LDR exposed to room lighting, the output voltage is 2.5686 V._
+
+![Hand-covered voltage-divider output with the multimeter displaying 4.6598 V DC](evidence/potentialdivider-divider.jpg)
+
+_Photo 6. Covering the LDR with a hand increases the output voltage to 4.6598 V._
 
 ## Part 3: Observe the signal over time
 
@@ -100,8 +121,6 @@ Add one row per member. Include physical, paired, analytical and documentation w
 | phamvuminh080908 |                                         |                            |
 
 ## Sources and AI use
-
-- [Token Electronics: Light Dependent Resistor](https://www.token.com.tw/resistor/index.html) — how photons affect an LDR's resistance.
 
 Cite sources. Disclose permitted AI tools, purpose, relevant prompts/output used and how we checked or corrected it, or state that no AI was used. Keep private information out of the report and prompts.
 
