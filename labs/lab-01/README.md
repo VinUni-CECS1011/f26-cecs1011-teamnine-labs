@@ -3,39 +3,48 @@
 - Team name: Team 9
 - GitHub usernames: caocchinh (CS), DUCDUCDUC38 (EE), bfhvn (DS), phamvuminh080908 (EE)
 
-Complete the tasks below in the same order as the lab handout. Replace prompts with your results and keep units visible.
-
-## How to insert your photos
-
-1. Save your own measurement photos as JPG or PNG. Use clear filenames, such as `fixed-resistor.jpg` or `ldr-covered.png`.
-2. Upload them to `labs/lab-01/evidence/` in this private Labs repository using **Add file → Upload files**, then commit the upload. If the folder is missing, follow [Lab 1, Step 5](https://vinuni-cecs1011.github.io/labs/lab-01.html#upload-photos) to create it.
-3. Edit this report. Replace each **Insert your photo here** prompt with an image line using your actual filename, for example: `![Fixed-resistor measurement showing the reading and unit](evidence/fixed-resistor.jpg)`. Paste the line without surrounding backticks. The `!` displays the photo inside the report.
-4. Add a short caption below the image. Select **Preview** and check that the photo is visible, the reading/unit can be read, and the caption explains the result. Check filename spelling, extension and letter case if the image does not appear.
-5. Commit the report update using your own account. Keep the photos in the repository so the submitted version contains both the report and evidence.
-
-This starter contains no example photos. Insert your team's own evidence. Remove these setup instructions when your report is complete. Follow [the handout](https://vinuni-cecs1011.github.io/labs/lab-01.html) for the experiment and final submission checklist.
+Report progress: Tasks 1 and 2 documented; remaining sections pending.
 
 ## Part 1: Meet the tools and the sensor
 
 ### Task 1. Measure a fixed resistor
 
-- Nominal resistance and marked tolerance:
-- Measured resistance (kΩ):
-- Acceptable range (kΩ) and comparison with the measured value:
+We measured the fixed resistor using the multimeter in two-wire resistance mode, with one clip lead connected to each end of the resistor. The resistor was disconnected from the circuit during the measurement.
 
-**Insert your photo here:** fixed-resistor measurement, showing the reading and unit. Add a caption stating what was measured.
+- **Nominal resistance:** 10 kΩ.
+- **Marked tolerance:** ±5%.
+- **Measured resistance:** 9.9595 kΩ.
+
+The ±5% tolerance allows a variation of `10 × 0.05 = 0.5 kΩ` from the nominal value. Therefore, the acceptable resistance range is **9.5–10.5 kΩ**.
+
+Our measured value is `10 − 9.9595 = 0.0405 kΩ` below the nominal value, a difference of `(0.0405 / 10) × 100% = 0.405%`. Since 9.9595 kΩ lies within the acceptable range, the measurement is consistent with the resistor's marked tolerance. A resistor does not need to measure exactly 10 kΩ to meet this specification. We will use the measured value of 9.9595 kΩ in the voltage-divider calculations.
+
+![Fixed-resistor measurement with the multimeter displaying 9.9595 kΩ](evidence/fixed_resistor.jpg)
+
+_Photo 1. The multimeter shows 9.9595 kΩ across the disconnected 10 kΩ resistor, within its ±5% tolerance range._
 
 ### Task 2. Investigate the photoresistor
 
-- How we reproduced the exposed and covered conditions:
-- Exposed LDR resistance (kΩ):
-- Covered LDR resistance (kΩ):
-- How resistance changes with light:
-- Our prediction for Vout when covering the LDR, and why:
+We connected the multimeter leads to the disconnected LDR and measured its resistance under normal room lighting, then with a hand shading its light-sensitive surface. To repeat the comparison, keep the sensor position and room lighting the same and change only the hand coverage.
 
-**Insert your photo here:** exposed LDR resistance measurement, with a caption identifying the condition and reading.
+| Condition | Method                                     | Measured resistance (kΩ) |
+| --------- | ------------------------------------------ | ------------------------ |
+| Exposed   | Uncovered under normal room lighting       | 12.974                   |
+| Covered   | Light-sensitive surface shaded with a hand | 53.421                   |
 
-**Insert your photo here:** covered LDR resistance measurement, with a caption identifying the condition and reading.
+Covering the LDR increased its resistance from 12.974 kΩ to 53.421 kΩ, approximately 4.12 times the exposed value. This shows the expected response: less light gives a higher resistance, while more light gives a lower resistance.
+
+We predict that **covering the LDR will increase Vout**. Photons from light give electrons in the LDR energy to carry current. Covering it blocks some of these photons, so fewer electrons can carry current and its resistance increases. In our circuit, this means a larger voltage across the LDR, so Vout rises.
+
+The covered reading depends on how much light the hand blocks. Hand coverage reduces the light reaching the sensor but does not establish complete darkness.
+
+![Exposed LDR measurement with the multimeter displaying 12.974 kΩ](evidence/ldr-exposed.jpg)
+
+_Photo 2. The exposed LDR measures 12.974 kΩ under normal room lighting._
+
+![Hand-covered LDR measurement with the multimeter displaying 53.421 kΩ](evidence/ldr-covered.jpg)
+
+_Photo 3. Shading the LDR with a hand increases its measured resistance to 53.421 kΩ._
 
 ## Part 2: Build the sensor circuit
 
@@ -53,9 +62,9 @@ This starter contains no example photos. Insert your team's own evidence. Remove
 Use the fixed resistance from Task 1, the LDR resistances from Task 2 and the supply voltage from Task 3. Calculate Vout = Vs × Rphoto / (Rs + Rphoto), using the same units for both resistances. Show one calculation with your measured values.
 
 | Condition and method | LDR resistance (kΩ) | Calculated output (V) | Measured output (V) |
-| --- | --- | --- | --- |
-| Exposed: | | | |
-| Covered: | | | |
+| -------------------- | ------------------- | --------------------- | ------------------- |
+| Exposed:             |                     |                       |                     |
+| Covered:             |                     |                       |                     |
 
 - Explanation of the observed change in Vout:
 - Comparison of calculated and measured output; one difference or limitation:
@@ -83,14 +92,16 @@ What quantity might our project measure? What decision would it support? What as
 
 Add one row per member. Include physical, paired, analytical and documentation work as relevant. Each member commits meaningful work using their own account; commit counts are not graded.
 
-| GitHub username | Work completed and result I can explain | Evidence or report section |
-| --- | --- | --- |
-| caocchinh | | |
-| DUCDUCDUC38 | | |
-| bfhvn | | |
-| phamvuminh080908 | | |
+| GitHub username  | Work completed and result I can explain | Evidence or report section |
+| ---------------- | --------------------------------------- | -------------------------- |
+| caocchinh        |                                         |                            |
+| DUCDUCDUC38      |                                         |                            |
+| bfhvn            |                                         |                            |
+| phamvuminh080908 |                                         |                            |
 
 ## Sources and AI use
+
+- [Token Electronics: Light Dependent Resistor](https://www.token.com.tw/resistor/index.html) — how photons affect an LDR's resistance.
 
 Cite sources. Disclose permitted AI tools, purpose, relevant prompts/output used and how we checked or corrected it, or state that no AI was used. Keep private information out of the report and prompts.
 
