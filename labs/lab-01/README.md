@@ -1,7 +1,7 @@
 # Lab 1 — SENSE: Giving a System Senses
 
-- Team name:
-- GitHub usernames:
+- Team name: Team 9
+- GitHub usernames: caocchinh (CS), DUCDUCDUC38 (EE), bfhvn (DS), phamvuminh080908 (EE)
 
 Complete the tasks below in the same order as the lab handout. Replace prompts with your results and keep units visible.
 
@@ -85,7 +85,10 @@ Add one row per member. Include physical, paired, analytical and documentation w
 
 | GitHub username | Work completed and result I can explain | Evidence or report section |
 | --- | --- | --- |
-| | | |
+| caocchinh | | |
+| DUCDUCDUC38 | | |
+| bfhvn | | |
+| phamvuminh080908 | | |
 
 ## Sources and AI use
 
