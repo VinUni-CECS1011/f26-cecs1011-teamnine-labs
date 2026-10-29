@@ -38,11 +38,11 @@ Answer each question in one or two sentences and identify the source you used.
 
 ### 3. Practise SolidWorks individually
 
-- Tutorial source: [Solidworks Tutorial for Absolute Beginners!](https://www.youtube.com/watch?v=1du6w97Rsm4)
-- Stage reached: cut extrude
-- Representative native file: [labs/lab-02/Team09_Lab02_practice.SLDPRT](https://github.com/VinUni-CECS1011/f26-cecs1011-teamnine-labs/blob/5835a4f1d4509ccdffda23f25c8c20db0c57ff68/labs/lab-02/Team09_Lab02_practice.SLDPRT)
+- Tutorial source: [SolidWorks 2020 Tutorial: Exercise 1, learn from Home!](https://youtu.be/RdXIB7IHMT4?t=98) (stopped at 1:38)
+- Stage reached: first Boss-Extrude (`Boss-Extrude1`), forming the link with two holes
+- Representative native file: [Team09_Lab02_practice.sldprt](Team09_Lab02_practice.sldprt)
 
-![Team 9: SolidWorks practice, Cut-Extrude stage](practice.png)
+![Team 9: SolidWorks practice, Boss-Extrude stage](practice.png)
 
 _Team 9's representative practice screenshot._
 
@@ -82,6 +82,6 @@ Use one row per member and update it as work develops. Each member should contri
 
 ## Sources and AI use
 
-- Sources: [Prusa 3D Printing 101](https://www.prusa3d.com/p/3d-printing/3d-printing-101/), Prusa’s [PLA](https://help.prusa3d.com/article/pla_2062), [PETG](https://help.prusa3d.com/article/petg_2059), and [PrusaSlicer](https://help.prusa3d.com/article/first-print-with-prusaslicer-2-9_1753) guides, plus [MakerWorld](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555) and [Bambu XF001](https://us.store.bambulab.com/products/circular-embedded-electronic-digital-thermometer-1pcs-xf001).
+- Sources: [SolidWorks 2020 tutorial](https://youtu.be/RdXIB7IHMT4?t=98), [Prusa 3D Printing 101](https://www.prusa3d.com/p/3d-printing/3d-printing-101/), Prusa’s [PLA](https://help.prusa3d.com/article/pla_2062), [PETG](https://help.prusa3d.com/article/petg_2059), and [PrusaSlicer](https://help.prusa3d.com/article/first-print-with-prusaslicer-2-9_1753) guides, plus [MakerWorld](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555) and [Bambu XF001](https://us.store.bambulab.com/products/circular-embedded-electronic-digital-thermometer-1pcs-xf001).
 
 Before submission, check the files and links against the [Lab 2 handout](https://vinuni-cecs1011.github.io/labs/lab-02.html#save-and-submit). Include your team name, ordinary repository link, report path and full SHA in the Canvas record. Copy the latest full repository commit SHA after saving everything; keep it out of this report.
