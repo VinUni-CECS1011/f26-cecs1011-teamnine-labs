@@ -38,7 +38,11 @@ Check the bracket's mounting hole diameters and spacing against the sensor, plus
 - Stage reached: cut extrude
 - Representative native file: [labs/lab-02/Team09_Lab02_practice.SLDPRT](https://github.com/VinUni-CECS1011/f26-cecs1011-teamnine-labs/blob/5835a4f1d4509ccdffda23f25c8c20db0c57ff68/labs/lab-02/Team09_Lab02_practice.SLDPRT)
 
-Insert **one representative practice screenshot** and caption it with the team name and stage reached. For example, use `![Team name: practice stage](practice.png)` with your uploaded filename. Each member should describe their own practice operation in the contribution table below; separate individual submissions are not required.
+![Team 9: SolidWorks practice, Cut-Extrude stage](practice.png)
+
+_Team 9's representative practice screenshot._
+
+Each member should describe one operation they performed and can explain in the contribution table below. Include the tutorial timestamp where useful; separate individual submissions are not required.
 
 ### 4. Begin the team design
 
@@ -65,11 +69,11 @@ Insert **one final-model image** showing the checked dimensions, using a line su
 
 ## Contributions
 
-Use one row per member and update it as work develops. Each member should contribute using their own GitHub account and explain their individual practice and team design work.
+Use one row per member and update it as work develops. In the practice column, name an operation you performed, explain what it does in your own words, and include the tutorial timestamp. Each member should contribute using their own GitHub account and explain their individual practice and team design work.
 
 | GitHub username | Individual practice operation I can explain | Team design contribution and result I can explain |
 | --- | --- | --- |
-| caocchinh | | |
+| caocchinh | Revolve — rotates a profile around a central axis to create a circular or axisymmetric part, similar to turning on a lathe (tutorial at about 10:00). | |
 | DUCDUCDUC38 | | |
 | bfhvn | | |
 | phamvuminh080908 | | |
