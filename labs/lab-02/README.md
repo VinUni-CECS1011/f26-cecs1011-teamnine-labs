@@ -9,22 +9,25 @@
 
 Answer each question in one or two sentences and identify the source you used.
 
-1. What does the CAD application do, what does the slicer do, and what does the printer do?
-   What does the CAD application do, what does the slicer do, and what does the printer do?
-CAD creates the 3D digital model, the slicer translates it into layer-by-layer G-code instructions, and the 3D printer executes that code by depositing material to create the physical part.  
-[source](https://all3dp.com/2/what-is-3d-printing/)
-2. For an initial sensor bracket, what advantage or limitation of PLA and PETG would affect your material choice?
-PLA prints with sharper dimensional accuracy for quick fit checks, but PETG is preferred if the bracket needs higher heat resistance and impact toughness around warm electronics.  
-[source](https://help.prusa3d.com/category/material-guide_220)
-3. Which dimensions would you check to confirm that a part fits its component and the printer's build space? Why should you check an imported STL's size and units?
-Check the bracket's mounting hole diameters and spacing against the sensor, plus its overall outer dimensions against the print bed limits. You must verify STL scale because the format is unitless, meaning a slicer can easily misread millimeters as inches (scaling it 25.4× too big).  
-[source](https://all3dp.com/1/stl-file-format-3d-printing/)
-4. Which file would you keep for future dimension changes, and when would STEP be useful?
-   Keep the native CAD file (such as `.f3d` or `.sldprt`) to retain your editable parametric sketch history. A STEP file is essential when sharing the solid 3D geometry across different CAD programs without losing exact surfaces to mesh triangulation.  
-[source](https://all3dp.com/2/step-file-format-simply-explained/)
-5. How could print orientation affect the need for temporary supports? Describe one example.
-   Orienting a part to keep overhangs under 45° allows layers to support themselves without extra scaffolding. For example, printing an L-bracket standing upright requires support structures beneath the cantilevered arm, whereas laying it flat on its side eliminates the overhang completely.  
-[source](https://www.hubs.com/knowledge-base/how-design-parts-fdm-3d-printing/)
+1. **What does the CAD application do, what does the slicer do, and what does the printer do?**\
+   **Answer:** CAD creates the 3D digital model, the slicer translates it into layer-by-layer G-code instructions, and the 3D printer executes that code by depositing material to create the physical part.\
+   **Source:** [source](https://all3dp.com/2/what-is-3d-printing/)
+
+2. **For an initial sensor bracket, what advantage or limitation of PLA and PETG would affect your material choice?**\
+   **Answer:** PLA prints with sharper dimensional accuracy for quick fit checks, but PETG is preferred if the bracket needs higher heat resistance and impact toughness around warm electronics.\
+   **Source:** [source](https://help.prusa3d.com/category/material-guide_220)
+
+3. **Which dimensions would you check to confirm that a part fits its component and the printer's build space? Why should you check an imported STL's size and units?**\
+   **Answer:** Check the bracket's mounting hole diameters and spacing against the sensor, plus its overall outer dimensions against the print bed limits. You must verify STL scale because the format is unitless, meaning a slicer can easily misread millimeters as inches (scaling it 25.4× too big).\
+   **Source:** [source](https://all3dp.com/1/stl-file-format-3d-printing/)
+
+4. **Which file would you keep for future dimension changes, and when would STEP be useful?**\
+   **Answer:** Keep the native CAD file (such as `.f3d` or `.sldprt`) to retain your editable parametric sketch history. A STEP file is essential when sharing the solid 3D geometry across different CAD programs without losing exact surfaces to mesh triangulation.\
+   **Source:** [source](https://all3dp.com/2/step-file-format-simply-explained/)
+
+5. **How could print orientation affect the need for temporary supports? Describe one example.**\
+   **Answer:** Orienting a part to keep overhangs under 45° allows layers to support themselves without extra scaffolding. For example, printing an L-bracket standing upright requires support structures beneath the cantilevered arm, whereas laying it flat on its side eliminates the overhang completely.\
+   **Source:** [source](https://www.hubs.com/knowledge-base/how-design-parts-fdm-3d-printing/)
 
 ### 2. Choose a design for the final project
 
