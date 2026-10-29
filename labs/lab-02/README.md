@@ -36,7 +36,7 @@ Check the bracket's mounting hole diameters and spacing against the sensor, plus
 
 - Tutorial source:
 - Stage reached:
-- Representative native file: `TEAMNAME-lab02-practice.SLDPRT` (replace this with the actual link).
+- Representative native file: [TEAMNAME-lab02-practice.SLDPRT](labs/lab-02/Team09_Lab02_practice.SLDPRT)
 
 Insert **one representative practice screenshot** and caption it with the team name and stage reached. For example, use `![Team name: practice stage](practice.png)` with your uploaded filename. Each member should describe their own practice operation in the contribution table below; separate individual submissions are not required.
 
