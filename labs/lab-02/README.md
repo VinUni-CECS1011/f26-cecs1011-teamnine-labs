@@ -73,7 +73,7 @@ Use one row per member and update it as work develops. Each member should contri
 
 | GitHub username | Individual practice operation I can explain | Team design contribution and result I can explain |
 | --- | --- | --- |
-| caocchinh | Revolve — rotates a profile around a central axis to create a circular or axisymmetric part, similar to turning on a lathe (tutorial at about 10:00). | |
+| caocchinh | I learned to set up a SolidWorks part, sketch on default planes or existing faces, and use Smart Dimension and Extruded Boss/Base to create accurately sized solids. I also practiced editing features, making blind or through-all cuts, adding fillets, and using Revolved Boss/Base to create circular geometry. | |
 | DUCDUCDUC38 | | |
 | bfhvn |I set up a part, created 2D sketches on planes and faces, and transformed them into 3D geometry using Extruded Boss/Base. I mastered using Smart Dimension to define shapes and Extruded Cut to remove material. Finally, I utilized the Edit Feature tool to adjust the depth of my cuts with precision. | |
 | phamvuminh080908 | Sweep — creates a 3D solid or surface by moving a 2D sketch profile along a specified path, useful for modeling curved pipes, tubes, cables, and other shapes that follow a trajectory. (Tutorial up to the “Sweep” section - at the 11th minute).| |
