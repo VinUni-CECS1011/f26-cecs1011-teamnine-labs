@@ -31,9 +31,10 @@ Answer each question in one or two sentences and identify the source you used.
 
 ### 2. Choose a design for the final project
 
-- Describe where the part would be used in your final project and what it would support, protect or position. Identify one important dimension or connection and label assumptions.
-- Give the reference title, creator, link, license and available file types. State the recommended material, or write “not stated,” and explain your proposed print orientation.
-- Propose one simple adaptation for your project. If browsing is inaccessible, identify the supplied example or your own design route and its project use instead.
+- **Project use (assumption):** Our project aims to monitor fridge conditions to reduce food spoilage ([onboarding note](../../onboarding/caocchinh.md)). The holder would position the sensor in open air and keep its readout visible. The clip gap must fit the shelf; sensor and shelf dimensions are not measured yet.
+- **Reference:** [Humidity & Temperature Sensor Holder](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555) by **StefB**. It holds Bambu Lab's B-XF001 sensor and is described as support-free. The listing has one `.3mf` print profile and no native CAD/STEP file. Its Standard Digital File License restricts remixes, redistribution, and commercial use without permission.
+- **Material/orientation:** Material is **not stated** (“Default, all plastics”). We propose PETG for a tougher, moisture-resistant clip ([Prusa guide](https://help.prusa3d.com/category/material-guide_220)). Print the broad mounting face on the bed, sensor seat facing up.
+- **Adaptation:** Model a new open-sided shelf clip for our measured sensor and shelf. Keep the sensor exposed to airflow and the display accessible; do not remix the reference geometry.
 
 ### 3. Practise SolidWorks individually
 
@@ -57,10 +58,10 @@ _Team 9's representative practice screenshot._
 - CAD application/version:
 - State whether you created a new model, adapted a reference or reconstructed a limited feature. Credit any reused source and identify the scope.
 
-| Dimension/check | Intended value and reason | CAD result and checking method |
-| --- | --- | --- |
-| Critical dimension | | |
-| Another relevant dimension | | |
+| Dimension/check            | Intended value and reason | CAD result and checking method |
+| -------------------------- | ------------------------- | ------------------------------ |
+| Critical dimension         |                           |                                |
+| Another relevant dimension |                           |                                |
 
 Insert **one final-model image** showing the checked dimensions, using a line such as `![Final model and checked dimensions](final-model.png)`. Retain the starting sketch in the classroom record. There should be **three images in total**, including the practice screenshot.
 
@@ -72,15 +73,16 @@ Insert **one final-model image** showing the checked dimensions, using a line su
 
 Use one row per member and update it as work develops. Each member should contribute using their own GitHub account and explain their individual practice and team design work.
 
-| GitHub username | Individual practice operation I can explain | Team design contribution and result I can explain |
-| --- | --- | --- |
-| caocchinh | I learned to set up a SolidWorks part, sketch on default planes or existing faces, and use Smart Dimension and Extruded Boss/Base to create accurately sized solids. I also practiced editing features, making blind or through-all cuts, adding fillets, and using Revolved Boss/Base to create circular geometry. | |
-| DUCDUCDUC38 |I created 2D sketches on selected faces of a 3D part and used the Extruded Cut feature to remove material and shape the model. I learned how to control the cut direction and depth to achieve the desired result. Finally, I refined the part by adjusting the cut parameters to create precise openings, slots, and other features. | |
-| bfhvn |I set up a part, created 2D sketches on planes and faces, and transformed them into 3D geometry using Extruded Boss/Base. I mastered using Smart Dimension to define shapes and Extruded Cut to remove material. Finally, I utilized the Edit Feature tool to adjust the depth of my cuts with precision. | |
-| phamvuminh080908 |I created 2D sketch profiles and defined paths to build more complex 3D shapes using the Sweep feature. I learned how to guide a profile along a selected trajectory to form curved and elongated structures. Finally, I applied Sweep to model features such as pipes and tubes, gaining a better understanding of how profiles and paths work together to create 3D geometry.| |
+| GitHub username  | Individual practice operation I can explain                                                                                                                                                                                                                                                                                                                                     | Team design contribution and result I can explain |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| caocchinh        | I learned to set up a SolidWorks part, sketch on default planes or existing faces, and use Smart Dimension and Extruded Boss/Base to create accurately sized solids. I also practiced editing features, making blind or through-all cuts, adding fillets, and using Revolved Boss/Base to create circular geometry.                                                             |                                                   |
+| DUCDUCDUC38      | I created 2D sketches on selected faces of a 3D part and used the Extruded Cut feature to remove material and shape the model. I learned how to control the cut direction and depth to achieve the desired result. Finally, I refined the part by adjusting the cut parameters to create precise openings, slots, and other features.                                           |                                                   |
+| bfhvn            | I set up a part, created 2D sketches on planes and faces, and transformed them into 3D geometry using Extruded Boss/Base. I mastered using Smart Dimension to define shapes and Extruded Cut to remove material. Finally, I utilized the Edit Feature tool to adjust the depth of my cuts with precision.                                                                       |                                                   |
+| phamvuminh080908 | I created 2D sketch profiles and defined paths to build more complex 3D shapes using the Sweep feature. I learned how to guide a profile along a selected trajectory to form curved and elongated structures. Finally, I applied Sweep to model features such as pipes and tubes, gaining a better understanding of how profiles and paths work together to create 3D geometry. |                                                   |
 
 ## Sources and AI use
 
-List other sources. If AI was used, identify the tool, relevant prompt and output, and your verification or corrections. Otherwise, write “No AI used.”
+- Sources: [MakerWorld](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555), [Bambu XF001](https://us.store.bambulab.com/products/circular-embedded-electronic-digital-thermometer-hygrometer-1pcs-xf001), and [Prusa material guide](https://help.prusa3d.com/category/material-guide_220).
+- AI: ChatGPT drafted this section from the MakerWorld reference. We checked its details against the listing and project context against our onboarding note; physical fit still needs measurement.
 
 Before submission, check the files and links against the [Lab 2 handout](https://vinuni-cecs1011.github.io/labs/lab-02.html#save-and-submit). Include your team name, ordinary repository link, report path and full SHA in the Canvas record. Copy the latest full repository commit SHA after saving everything; keep it out of this report.
