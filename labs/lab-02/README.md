@@ -45,8 +45,6 @@ Answer each question in one or two sentences and identify the source you used.
 
 _Team 9's representative practice screenshot._
 
-Insert **one representative practice screenshot** and caption it with the team name and stage reached. For example, use `![Team name: practice stage](practice.png)` with your uploaded filename. Each member should describe their own practice operation in the contribution table below; separate individual submissions are not required.
-
 ### 4. Begin the team design
 
 - State your part's purpose and one measurable requirement, with a reason. Identify the source of its dimensions and label assumptions.
