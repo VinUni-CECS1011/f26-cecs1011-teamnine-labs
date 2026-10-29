@@ -34,9 +34,9 @@ Check the bracket's mounting hole diameters and spacing against the sensor, plus
 
 ### 3. Practise SolidWorks individually
 
-- Tutorial source:
-- Stage reached:
-- Representative native file: [TEAMNAME-lab02-practice.SLDPRT]([labs/lab-02/Team09_Lab02_practice.SLDPRT](https://github.com/VinUni-CECS1011/f26-cecs1011-teamnine-labs/blob/5835a4f1d4509ccdffda23f25c8c20db0c57ff68/labs/lab-02/Team09_Lab02_practice.SLDPRT))
+- Tutorial source: [Solidworks Tutorial for Absolute Beginners!](https://www.youtube.com/watch?v=1du6w97Rsm4)
+- Stage reached: cut extrude
+- Representative native file: [labs/lab-02/Team09_Lab02_practice.SLDPRT](https://github.com/VinUni-CECS1011/f26-cecs1011-teamnine-labs/blob/5835a4f1d4509ccdffda23f25c8c20db0c57ff68/labs/lab-02/Team09_Lab02_practice.SLDPRT))
 
 Insert **one representative practice screenshot** and caption it with the team name and stage reached. For example, use `![Team name: practice stage](practice.png)` with your uploaded filename. Each member should describe their own practice operation in the contribution table below; separate individual submissions are not required.
 
