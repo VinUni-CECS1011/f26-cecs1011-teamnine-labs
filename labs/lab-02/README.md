@@ -31,10 +31,10 @@ Answer each question in one or two sentences and identify the source you used.
 
 ### 2. Choose a design for the final project
 
-- **Project use (assumption):** Our project aims to monitor fridge conditions to reduce food spoilage ([onboarding note](../../onboarding/caocchinh.md)). The holder would position the sensor in open air and keep its readout visible. The clip gap must fit the shell. The sensor and shelf dimensions are not measured yet.
-- **Reference:** [Humidity & Temperature Sensor Holder](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555) by **StefB**. It holds Bambu Lab's B-XF001 sensor and is described as support-free. The listing has one `.3mf` print profile and no native CAD/STEP file. Its Standard Digital File License restricts remixes, redistribution, and commercial use without permission.
-- **Material/orientation:** Material is **not stated** (“Default, all plastics”). We propose PETG for a tougher, moisture-resistant clip ([Prusa guide](https://help.prusa3d.com/category/material-guide_220)). Print the broad mounting face on the bed, sensor seat facing up.
-- **Adaptation:** Model a new open-sided shelf clip for our measured sensor and shelf. Keep the sensor exposed to airflow and the display accessible.
+- **Project use (assumption):** Our project aims to monitor fridge conditions to reduce food spoilage ([onboarding note](../../onboarding/caocchinh.md)). A hanging holder could keep the sensor exposed to air and its readout visible near a fridge rack. The sensor and a suitable rack location are not measured yet.
+- **Reference:** [Hanging Holder for SwitchBot Meter Plus](https://makerworld.com/en/models/3427659-hanging-holder-for-switchbot-meter-plus?from=search#profileId-3907115) by **yamato**. It holds a SwitchBot Meter Plus and hangs from two S-hooks.
+- **Material/orientation:** The listed profile uses PLA. We propose PETG for a tougher, moisture-resistant holder ([Prusa guide](https://help.prusa3d.com/category/material-guide_220)). Choose an orientation that prints the hanging features reliably and minimizes supports; confirm it in the slicer.
+- **Adaptation:** Design a hanging holder around our measured sensor, keeping the display accessible and the sensor exposed to airflow. Size two hook holes for the selected S-hooks and verify that our fridge rack can support this hanging arrangement.
 
 ### 3. Practise SolidWorks individually
 
@@ -82,7 +82,7 @@ Use one row per member and update it as work develops. Each member should contri
 
 ## Sources and AI use
 
-- Sources: [SolidWorks 2020 tutorial](https://youtu.be/RdXIB7IHMT4?t=98), [Prusa 3D Printing 101](https://www.prusa3d.com/p/3d-printing/3d-printing-101/), Prusa’s [PLA](https://help.prusa3d.com/article/pla_2062), [PETG](https://help.prusa3d.com/article/petg_2059), and [PrusaSlicer](https://help.prusa3d.com/article/first-print-with-prusaslicer-2-9_1753) guides, plus [MakerWorld](https://makerworld.com/en/models/1137074-humidity-temperature-sensor-holder?from=search#profileId-1138555) and [Bambu XF001](https://us.store.bambulab.com/products/circular-embedded-electronic-digital-thermometer-1pcs-xf001).
+- Sources: [SolidWorks 2020 tutorial](https://youtu.be/RdXIB7IHMT4?t=98), [Prusa 3D Printing 101](https://www.prusa3d.com/p/3d-printing/3d-printing-101/), Prusa’s [PLA](https://help.prusa3d.com/article/pla_2062), [PETG](https://help.prusa3d.com/article/petg_2059), and [PrusaSlicer](https://help.prusa3d.com/article/first-print-with-prusaslicer-2-9_1753) guides, plus the [MakerWorld hanging holder reference](https://makerworld.com/en/models/3427659-hanging-holder-for-switchbot-meter-plus?from=search#profileId-3907115).
 - AI use: We used AI to help rephrase and organize our Task 1 answers based on our findings in the assigned sources. For Task 2, our team found the design and reference. AI helped us organize our findings.
 
 Before submission, check the files and links against the [Lab 2 handout](https://vinuni-cecs1011.github.io/labs/lab-02.html#save-and-submit). Include your team name, ordinary repository link, report path and full SHA in the Canvas record. Copy the latest full repository commit SHA after saving everything; keep it out of this report.
