@@ -31,10 +31,11 @@ Answer each question in one or two sentences and identify the source you used.
 
 ### 2. Choose a design for the final project
 
-- **Project use (assumption):** Our project aims to monitor fridge conditions to reduce food spoilage ([onboarding note](../../onboarding/caocchinh.md)). A hanging holder could keep the sensor exposed to air and its readout visible near a fridge rack. The sensor and a suitable rack location are not measured yet.
+- **Project use:** The holder positions the fridge sensor near a rack, keeps its display visible, and exposes the sensor to air.
 - **Reference:** [Hanging Holder for SwitchBot Meter Plus](https://makerworld.com/en/models/3427659-hanging-holder-for-switchbot-meter-plus?from=search#profileId-3907115) by **yamato**. It holds a SwitchBot Meter Plus and hangs from two S-hooks.
-- **Material/orientation:** The listed profile uses PLA. We propose PETG for a tougher, moisture-resistant holder ([Prusa guide](https://help.prusa3d.com/category/material-guide_220)). Choose an orientation that prints the hanging features reliably and minimizes supports; confirm it in the slicer.
-- **Adaptation:** Design a hanging holder around our measured sensor, keeping the display accessible and the sensor exposed to airflow. Size two hook holes for the selected S-hooks and verify that our fridge rack can support this hanging arrangement.
+- **Reference license and files:** License not recorded. The team files are SolidWorks and STL files.
+- **Material and orientation:** We selected PETG for moisture resistance. The broad back face sits on the print bed.
+- **Adaptation:** We created an upright sensor holder with a back panel, side supports, a lower support, and cutouts.
 
 ### 3. Practise SolidWorks individually
 
@@ -48,41 +49,49 @@ _Team 9's representative practice screenshot._
 
 ### 4. Begin the team design
 
-- State your part's purpose and one measurable requirement, with a reason. Identify the source of its dimensions and label assumptions.
-- Insert **one dimensioned starting sketch**, using a line such as `![Starting sketch](starting-sketch.png)` with your uploaded filename.
-- Link the initial CAD document and describe the sketch or first feature created in class. If the same file is updated later, its earlier version remains in Git history.
-- State which CAD software you will use after class and what remains to be completed. Record any unresolved access or modelling difficulty.
+- **Purpose and requirement:** The holder supports the fridge sensor, keeps its display visible, and exposes it to air. The starting support profile measures 12.00 cm × 18.50 cm in the SolidWorks CGS unit system.
+- **Starting sketch:** The starting sketch is a fully defined 12.00 cm × 18.50 cm rectangle.
+
+![Team 9: dimensioned starting sketch](starting-sketch.png)
+
+_Team 9's fully defined SolidWorks starting sketch._
+
+- **Initial CAD document:** [Team09-design.SLDPRT](Team09-design.SLDPRT). The model uses sketches, extrusions, and cut features.
+- **Software:** SolidWorks Design Standard 2026 SP4.1.
 
 ## Design completed after class
 
-- CAD application/version:
-- State whether you created a new model, adapted a reference or reconstructed a limited feature. Credit any reused source and identify the scope.
+- **CAD application/version:** SolidWorks Design Standard 2026 SP4.1.
+- **Model scope and credit:** We created a new upright sensor holder inspired by the [MakerWorld hanging-holder reference](https://makerworld.com/en/models/3427659-hanging-holder-for-switchbot-meter-plus?from=search#profileId-3907115) by yamato.
+- **Feature summary:** The model has a back panel, side supports, a lower support, slots, and a rectangular opening.
 
-| Dimension/check            | Intended value and reason | CAD result and checking method |
-| -------------------------- | ------------------------- | ------------------------------ |
-| Critical dimension         |                           |                                |
-| Another relevant dimension |                           |                                |
+| Dimension/check         | Intended value and reason                                                                                        | CAD result and checking method                                                                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Starting-profile width  | 12.00 cm. It sets the width of the starting support profile.  | Checked with Smart Dimension in the starting sketch. |
+| Starting-profile height | 18.50 cm. It sets the height of the starting support profile. | Checked with Smart Dimension in the starting sketch. |
 
-Insert **one final-model image** showing the checked dimensions, using a line such as `![Final model and checked dimensions](final-model.png)`. Retain the starting sketch in the classroom record. There should be **three images in total**, including the practice screenshot.
+![Team 9: supplied final SolidWorks model](final-model.png)
 
-- Explain what you created or changed, any revision and any remaining limitation.
-- Link the final native CAD document and STL. State the export units or settings and whether you reopened the STL and checked its size.
-- Propose one physical test that would check the part's fit or function.
+_Team 9's final SolidWorks model._
+
+- **Changes:** We extruded the starting profile and used cuts to form the upright holder, support surfaces, slots, and opening.
+- **Final files and export check:** [Team09-design.SLDPRT](Team09-design.SLDPRT) and [Team09-design.STL](Team09-design.STL). The STL was reopened and checked in SolidWorks. It is in millimeters and measures 120.0 × 38.08 × 185.71 mm.
+- **Proposed physical test:** Print the holder, insert the sensor, and check that it sits securely with the display visible.
 
 ## Contributions
 
 Use one row per member and update it as work develops. Each member should contribute using their own GitHub account and explain their individual practice and team design work.
 
-| GitHub username  | Individual practice operation I can explain                                                                                                                                                                                                                                                                                                                                     | Team design contribution and result I can explain |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| caocchinh        | I followed the new SolidWorks 2020 Exercise 1 tutorial through 1:38 and reached the first Boss-Extrude (`Boss-Extrude1`), forming a link-shaped base with two holes.                                                                                                                                                                                                            | I built the 3D model in SolidWorks, drew all the base sketches, added dimensions, and ran the extrusions and cuts. I can explain the sketch constraints and feature tree. |
-| DUCDUCDUC38      | I followed the new SolidWorks 2020 Exercise 1 tutorial through 4:14, forming a link-shaped base with two holes and a 2 upper part of body with 2 holes                                    |                                                   |
-| bfhvn            | I set up a part, created 2D sketches on planes and faces, and transformed them into 3D geometry using Extruded Boss/Base. I mastered using Smart Dimension to define shapes and Extruded Cut to remove material. Finally, I utilized the Edit Feature tool to adjust the depth of my cuts with precision.                                                                       |                                                   |
-| phamvuminh080908 |I independently practised exporting the completed SolidWorks model into STL format for 3D printing. I learned how to select the appropriate export settings and check the model for solid body geometry errors before exporting. Through this practice, I improved my understanding of the STL export process and how to prepare a 3D model to ensure it is suitable for 3D printing. I can explain the file export procedure and the model preparation steps.|Handled exporting the finished SolidWorks model file to STL for 3D printing and checked for solid body geometry errors. I can explain the file export and model prep steps.
+| GitHub username  | Individual practice operation I can explain                                                                                                                                                                                                                                                                                                                                                                                                                    | Team design contribution and result I can explain                                                                                                                           |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| caocchinh        | I followed the new SolidWorks 2020 Exercise 1 tutorial through 1:38 and reached the first Boss-Extrude (`Boss-Extrude1`), forming a link-shaped base with two holes.                                                                                                                                                                                                                                                                                           | I built the 3D model in SolidWorks, drew all the base sketches, added dimensions, and ran the extrusions and cuts. I can explain the sketch constraints and feature tree.   |
+| DUCDUCDUC38      | I followed the new SolidWorks 2020 Exercise 1 tutorial through 4:14, forming a link-shaped base with two holes and a 2 upper part of body with 2 holes                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                             |
+| bfhvn            | I set up a part, created 2D sketches on planes and faces, and transformed them into 3D geometry using Extruded Boss/Base. I mastered using Smart Dimension to define shapes and Extruded Cut to remove material. Finally, I utilized the Edit Feature tool to adjust the depth of my cuts with precision.                                                                                                                                                      |                                                                                                                                                                             |
+| phamvuminh080908 | I independently practised exporting the completed SolidWorks model into STL format for 3D printing. I learned how to select the appropriate export settings and check the model for solid body geometry errors before exporting. Through this practice, I improved my understanding of the STL export process and how to prepare a 3D model to ensure it is suitable for 3D printing. I can explain the file export procedure and the model preparation steps. | Handled exporting the finished SolidWorks model file to STL for 3D printing and checked for solid body geometry errors. I can explain the file export and model prep steps. |
 
 ## Sources and AI use
 
 - Sources: [SolidWorks 2020 tutorial](https://youtu.be/RdXIB7IHMT4?t=98), [Prusa 3D Printing 101](https://www.prusa3d.com/p/3d-printing/3d-printing-101/), Prusa’s [PLA](https://help.prusa3d.com/article/pla_2062), [PETG](https://help.prusa3d.com/article/petg_2059), and [PrusaSlicer](https://help.prusa3d.com/article/first-print-with-prusaslicer-2-9_1753) guides, plus the [MakerWorld hanging holder reference](https://makerworld.com/en/models/3427659-hanging-holder-for-switchbot-meter-plus?from=search#profileId-3907115).
-- AI use: We used AI to help rephrase and organize our Task 1 answers based on our findings in the assigned sources. For Task 2, our team found the design and reference. AI helped us organize our findings.
+- AI use: AI helped organize and rephrase the report using the team's sources and supplied CAD files.
 
-Before submission, check the files and links against the [Lab 2 handout](https://vinuni-cecs1011.github.io/labs/lab-02.html#save-and-submit). Include your team name, ordinary repository link, report path and full SHA in the Canvas record. Copy the latest full repository commit SHA after saving everything; keep it out of this report.
+Before submission, check the files and links against the [Lab 2 handout](https://vinuni-cecs1011.github.io/labs/lab-02.html#save-and-submit). Include your team name, ordinary repository link, report path and full SHA in the Canvas record. Copy the latest full repository commit SHA after saving everything. Keep it out of this report.
