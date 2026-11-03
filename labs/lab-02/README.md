@@ -75,7 +75,7 @@ _Team 9's fully defined SolidWorks starting sketch._
 _Team 9's final SolidWorks model._
 
 - **Changes:** We extruded the starting profile and used cuts to form the upright holder, support surfaces, slots, and opening.
-- **Final files and export check:** [Team09-design.SLDPRT](Team09-design.SLDPRT) and [Team09-design.STL](Team09-design.STL). The STL was reopened and checked in SolidWorks. It is in millimeters and measures 120.0 × 38.08 × 185.71 mm.
+- **Final files and export check:** [Team09-design.SLDPRT](Team09-design.SLDPRT) and [Team09-design.STL](Team09-design.STL). The STL was reopened and checked in SolidWorks. Its export metadata identifies the object as `Team09-design.stl` and reports dimensions of 120 × 34.5794 × 185 mm, a volume of 110603 mm³, and 176 triangles.
 - **Proposed physical test:** Print the holder, insert the sensor, and check that it sits securely with the display visible.
 
 ## Contributions
