@@ -12,11 +12,17 @@
 Record your team's discussion in one or two sentences per question.
 
 1. In **Processor and memory**, identify the chip that runs your sketch. Which memory keeps the program when power is removed, and which memory loses its working data?
+   - The ATmega328P runs the sketch. Flash keeps the program. SRAM loses its data when power is off.
 2. In **Clock speed**, compare 16 MHz with the example laptop clock. Why does the frequency ratio alone not tell you how much faster a program will run?
+   - 2.4 GHz is 150× the clock frequency, but architecture, cores, memory and waiting time also affect speed.
 3. In **Analogue pins**, **Digital pins** and **Power and ground**, locate A0, D9, 5V and GND. Which connections carry information, and which provide power or a reference voltage?
+   - A0 and D9 carry information. 5V supplies power and GND is the common reference.
 4. In **Built-in LED**, find D13 and try the control. Could A6 replace D13 as an output? Use the pin descriptions to explain your answer.
+   - No. A6 is analogue-input only, so it cannot act as a digital output.
 5. Imagine building a smart light that turns on automatically when a room gets dark. Which Arduino pins could you use to connect a light sensor and an LED? What would the Arduino program need to decide?
+   - Sensor to A0, LED to a digital pin such as D13. The program decides if the reading crosses a darkness threshold.
 6. Imagine building an automatic window shade that closes when sunlight is too bright. How could you use readings from a light sensor to decide when to close the shade? What could you connect to the Arduino to physically move the shade?
+   - Close the shade when the reading passes a brightness threshold. A servo on D9 moves the shade.
 
 ### 1.2. Trace the program — Activity 2
 
@@ -85,12 +91,12 @@ Restore `int reading = analogRead(A0);` in the final program so it uses the sens
 
 Use one row per member. Each member should commit meaningful work using their own GitHub account and explain their practice or team contribution. Prediction, coding, testing, interpretation, paired work and documentation all count when supported by evidence.
 
-| GitHub username | Contribution and related evidence | One result or concept I can explain |
-| --------------- | --------------------------------- | ----------------------------------- |
-| caocchinh       |                                   |                                     |
-| DUCDUCDUC38     |                                   |                                     |
-| bfhvn           |                                   |                                     |
-| phamvuminh080908 |                                  |                                     |
+| GitHub username  | Contribution and related evidence | One result or concept I can explain |
+| ---------------- | --------------------------------- | ----------------------------------- |
+| caocchinh        |                                   |                                     |
+| DUCDUCDUC38      |                                   |                                     |
+| bfhvn            |                                   |                                     |
+| phamvuminh080908 |                                   |                                     |
 
 ## Sources and AI use
 
