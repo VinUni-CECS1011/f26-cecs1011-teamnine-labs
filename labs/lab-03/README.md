@@ -12,7 +12,7 @@
 Record your team's discussion in one or two sentences per question.
 
 1. In **Processor and memory**, identify the chip that runs your sketch. Which memory keeps the program when power is removed, and which memory loses its working data?
-   - The ATmega328P runs the sketch. Flash keeps the program. SRAM loses its data when power is off.
+   - The ATmega328P runs the sketch. Flash and EEPROM keeps the program. SRAM loses its data when power is off.
 2. In **Clock speed**, compare 16 MHz with the example laptop clock. Why does the frequency ratio alone not tell you how much faster a program will run?
    - 2.4 GHz is 150× the clock frequency, but architecture, cores, memory and waiting time also affect speed.
 3. In **Analogue pins**, **Digital pins** and **Power and ground**, locate A0, D9, 5V and GND. Which connections carry information, and which provide power or a reference voltage?
