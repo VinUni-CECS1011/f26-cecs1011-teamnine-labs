@@ -22,34 +22,40 @@ Record your team's discussion in one or two sentences per question.
 5. Imagine building a smart light that turns on automatically when a room gets dark. Which Arduino pins could you use to connect a light sensor and an LED? What would the Arduino program need to decide?
    - Sensor AO to A0, because A0 can measure a changing voltage. the LED connects to a digital pin such as D13. The program checks whether the reading rises above a darkness threshold: if so, the LED turns on, otherwise it stays off.
 6. Imagine building an automatic window shade that closes when sunlight is too bright. How could you use readings from a light sensor to decide when to close the shade? What could you connect to the Arduino to physically move the shade?
-   - In `loop()`, continuously read the LDR on A0 and compare it with a threshold. More light gives a lower reading, so if it drops below the threshold, close the shade, otherwise keep it open. A servo on D9 physically moves the shade.
+   - Close the shade when the reading passes a brightness threshold. A servo on D9 moves the shade.
 
 ### 1.2. Trace the program — Activity 2
 
 In one sentence, describe what happened to the startup and loop messages when you ran and restarted the Activity 2 program.
+startup message: Ready, Loop message: count with value +=1 each loop, blink slower from 500 ms to 1000 ms
 
 ### 1.3. Explain the connections — Activities 3 and 4
 
 Use one or two sentences for each explanation. Include a labelled sensor → controller → actuator chain; text is sufficient. Include the LCD as an additional output.
 
 - Why must the sensor, servo and Nano share GND?
-- Why does AO connect to an analogue input, and what would change in the code if you used A1 instead of A0?
++ They share GND to use 0V as reference. Nano use 5V to 0V scale to decode sensor and servo information(i.e PWM, ADC info) into Voltage.
+- Why does A0 connect to an analogue input, and what would change in the code if you used A1 instead of A0?
++ AO connects to an analogue input because the sensor outputs a voltage that varies with light, and the Nano’s ADC measures that voltage.
+If you wire AO to A1, replace analogRead(A0) with analogRead(A1).
 - What does D9 carry, which wires supply the servo's power, and what would change if the signal moved to D8?
-
++ D9 carries the servo control pulses. V+ connects to 5 V, and GND provides the return path.
+If you move the signal wire to D8, change shade.attach(9) to shade.attach(8).
 ## 2. Observe the sensor
 
 Record two live input conditions before implementing the decision. The light setting is in lux; the sensor reading is the whole number returned by `analogRead(A0)`, from 0 to 1023.
 
 | Condition  | Simulated light setting (lux) | Observed sensor reading (0–1023) |
 | ---------- | ----------------------------- | -------------------------------- |
-| Less light |                               |                                  |
-| More light |                               |                                  |
+| Less light |         0.1                   |                  1015            |
+| More light |           100000              |             8                    |
 
 Explain how the reading changes with light. Why does the 10-bit ADC return 0–1023 even though the Nano stores the result in a 16-bit `int`?
-
+- More light lowers the sensor’s output voltage, so the reading dropped from 1015 at 0.1 lux to 8 at 100000 lux.
+- The 10-bit ADC produces 1,024 possible values, from 0 to 1023. The 16-bit int stores the result without changing the ADC’s resolution.
 ## 3. State the requirement
 
-- Threshold T (sensor reading):
+- Threshold T (sensor reading): 
 - Closed command (degrees):
 - Open command (degrees):
 
@@ -63,7 +69,7 @@ Complete the first three rows in Activity 5, before adding the LCD; record its s
 
 | Test              | Input value and source                       | Expected command and response | Observed command, virtual response and LCD state | Agreement or correction |
 | ----------------- | -------------------------------------------- | ----------------------------- | ------------------------------------------------ | ----------------------- |
-| Below threshold   | T − 1; injected software input               |                               |                                                  |                         |
+| Below threshold   | T − 1; injected software input               | TEAM 9 / reading=506, commanded_angle=0|TEAM 9 / reading=506, commanded_angle=0                                                  |                         |
 | At threshold      | T; injected software input                   |                               |                                                  |                         |
 | Above threshold   | T + 1; injected software input               |                               |                                                  |                         |
 | Bright live input | Record the light setting and observed count. |                               |                                                  |                         |
