@@ -22,7 +22,7 @@ Record your team's discussion in one or two sentences per question.
 5. Imagine building a smart light that turns on automatically when a room gets dark. Which Arduino pins could you use to connect a light sensor and an LED? What would the Arduino program need to decide?
    - Sensor AO to A0, because A0 can measure a changing voltage. the LED connects to a digital pin such as D13. The program checks whether the reading rises above a darkness threshold: if so, the LED turns on, otherwise it stays off.
 6. Imagine building an automatic window shade that closes when sunlight is too bright. How could you use readings from a light sensor to decide when to close the shade? What could you connect to the Arduino to physically move the shade?
-   - Close the shade when the reading passes a brightness threshold. A servo on D9 moves the shade.
+   - In `loop()`, continuously read the LDR on A0 and compare it with a threshold. More light gives a lower reading, so if it drops below the threshold, close the shade, otherwise keep it open. A servo on D9 physically moves the shade.
 
 ### 1.2. Trace the program — Activity 2
 
