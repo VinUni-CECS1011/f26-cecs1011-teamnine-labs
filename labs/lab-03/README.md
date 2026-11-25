@@ -64,11 +64,14 @@ Explain how the reading changes with light. Why does the 10-bit ADC return 0–1
 
 ## 3. State the requirement
 
-- **Threshold T (sensor reading):**
-- **Closed command (degrees):**
-- **Open command (degrees):**
+- **Threshold T (sensor reading):** `670`
+- **Closed command (degrees):** `0°`
+- **Open command (degrees):** `90°`
 
 State the rule, including what happens at equality, and justify the threshold using your observations. Keep T between 1 and 1022.
+
+- **Decision rule:** If `reading < 670` (brighter than the threshold), command the servo to `0°` (closed); if `reading >= 670`—including at equality (`reading == 670`)—command the servo to `90°` (open).
+- **Justification:** From Section 2, the sensor reading drops as light increases, ranging from `1015` at `0.1 lux` (less light) to `8` at `100000 lux` (more light). Setting `T = 670` (within `1–1022`) sits well between the two observed extremes so bright light reliably triggers the closed state (`< 670`) while dimmer conditions keep the shade open (`>= 670`).
 
 ## 4. Test and revise
 
