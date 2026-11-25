@@ -1,9 +1,9 @@
 # Lab 3 – THINK + ACT: Sense → Process → Act
 
 - **Team name:** Team 9
-- **Prototype or display label:**
+- **Prototype or display label:** Automatic Window Shade (`Team 9`)
 - **Members' GitHub usernames:** caocchinh, DUCDUCDUC38, bfhvn, phamvuminh080908
-- **Shared Wokwi project link:**
+- **Shared Wokwi project link:** https://wokwi.com/projects/481679833393944577
 
 ## 1. Explore the Nano, program and connections
 
@@ -12,7 +12,7 @@
 Record your team's discussion in one or two sentences per question.
 
 1. In **Processor and memory**, identify the chip that runs your sketch. Which memory keeps the program when power is removed, and which memory loses its working data?
-   - **Answer:** The ATmega328P runs the sketch. Flash and EEPROM keep the program, while SRAM loses its data when power is off.
+   - **Answer:** The ATmega328P runs the sketch. Flash stores the program (and EEPROM retains saved data without power), while SRAM loses its working data when power is off.
 
 2. In **Clock speed**, compare 16 MHz with the example laptop clock. Why does the frequency ratio alone not tell you how much faster a program will run?
    - **Answer:** 2.4 GHz is 150× the clock frequency, but architecture, cores, memory, and waiting time also affect speed.
@@ -24,7 +24,7 @@ Record your team's discussion in one or two sentences per question.
    - **Answer:** No. A6 is analogue-input only, so it cannot act as a digital output.
 
 5. Imagine building a smart light that turns on automatically when a room gets dark. Which Arduino pins could you use to connect a light sensor and an LED? What would the Arduino program need to decide?
-   - **Answer:** Connect the sensor's AO to A0, because A0 can measure a changing voltage, and connect the LED to a digital pin such as D13. The program checks whether the reading rises above a darkness threshold: if so, the LED turns on; otherwise, it stays off.
+   - **Answer:** Connect the sensor's AO to A0, because A0 can measure a changing voltage, and connect the LED to a digital pin such as D13. The program checks whether the reading rises above a darkness threshold: if so, the LED turns on, and otherwise it stays off.
 
 6. Imagine building an automatic window shade that closes when sunlight is too bright. How could you use readings from a light sensor to decide when to close the shade? What could you connect to the Arduino to physically move the shade?
    - **Answer:** Close the shade when the reading passes a brightness threshold. A servo on D9 moves the shade.
@@ -33,16 +33,18 @@ Record your team's discussion in one or two sentences per question.
 
 In one sentence, describe what happened to the startup and loop messages when you ran and restarted the Activity 2 program.
 
-- **Answer:** When the program started, `setup()` ran once to print `Ready` and `loop()` repeated to increment `count` and print `Loop 1`, `Loop 2`, `Loop 3`, …; after changing both `delay(500)` calls to `delay(1000)` and restarting, `setup()` ran once again to print `Ready`, `count` reset to `0` so the loop messages restarted at `Loop 1`, and the built-in LED flashed at half the rate (1000 ms on and 1000 ms off instead of 500 ms) because the longer software delays paused execution longer even though the processor still ran at 16 MHz.
+- **Answer:** When the program started, `setup()` ran once to print `Ready` and `loop()` repeated to increment `count` and print `Loop 1`, `Loop 2`, `Loop 3`, ..., and after changing both `delay(500)` calls to `delay(1000)` and restarting, `setup()` ran once again to print `Ready`, `count` reset to `0` so the loop messages restarted at `Loop 1`, and the built-in LED flashed at half the rate (1000 ms on and 1000 ms off instead of 500 ms) because the longer software delays paused execution longer even though the processor still ran at 16 MHz.
 
 ### 1.3. Explain the connections — Activities 3 and 4
 
 Use one or two sentences for each explanation. Include a labelled sensor → controller → actuator chain; text is sufficient. Include the LCD as an additional output.
 
-- **Why must the sensor, servo and Nano share GND?**
-  - **Answer:** They share GND to use 0 V as a common reference. The Nano uses the 0 V to 5 V scale to interpret sensor and servo signals (such as PWM and ADC values) as voltages.
+- **System chain:** LDR light sensor module (sensor, `AO -> A0`) -> Arduino Nano (controller) -> Servo motor (actuator, `D9`) + I2C LCD 1602 at `0x27` (additional output, `SDA -> A4`, `SCL -> A5`).
 
-- **Why does A0 connect to an analogue input, and what would change in the code if you used A1 instead of A0?**
+- **Why must the sensor, servo and Nano share GND?**
+  - **Answer:** They share GND to establish 0 V as a common voltage reference and current return path. The Nano measures the sensor's analogue voltage on A0 relative to GND, and the servo reads the Nano's 5 V PWM control pulses on D9 relative to that same 0 V reference.
+
+- **Why does AO connect to an analogue input, and what would change in the code if you used A1 instead of A0?**
   - **Answer:** AO connects to an analogue input because the sensor outputs a voltage that varies with light, and the Nano's ADC measures that voltage. If you wire AO to A1, replace `analogRead(A0)` with `analogRead(A1)`.
 
 - **What does D9 carry, which wires supply the servo's power, and what would change if the signal moved to D8?**
@@ -70,7 +72,7 @@ Explain how the reading changes with light. Why does the 10-bit ADC return 0–1
 
 State the rule, including what happens at equality, and justify the threshold using your observations. Keep T between 1 and 1022.
 
-- **Decision rule:** If `reading < 670` (brighter than the threshold), command the servo to `0°` (closed); if `reading >= 670`—including at equality (`reading == 670`)—command the servo to `90°` (open).
+- **Decision rule:** If `reading < 670` (brighter than the threshold), command the servo to `0°` (closed). If `reading >= 670`, including at equality (`reading == 670`), command the servo to `90°` (open).
 - **Justification:** From Section 2, the sensor reading drops as light increases, ranging from `1015` at `0.1 lux` (less light) to `8` at `100000 lux` (more light). Setting `T = 670` (within `1–1022`) sits well between the two observed extremes so bright light reliably triggers the closed state (`< 670`) while dimmer conditions keep the shade open (`>= 670`).
 
 ## 4. Test and revise
@@ -79,23 +81,30 @@ Write predictions before running the tests. Record actual results separately and
 
 Complete the first three rows in Activity 5, before adding the LCD; record its state as “Not added.” Restore `int reading = analogRead(A0);`, then add the LCD and complete the two live-test rows in Activity 6.
 
-| Test              | Input value and source                       | Expected command and response                                | Observed command, virtual response and LCD state                                  | Agreement or correction |
-| ----------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------- | ----------------------- |
-| Below threshold   | `669` (T − 1); injected software input       | `reading=669, commanded_angle=0`; servo moves to `0°`        | `reading=669, commanded_angle=0`; servo moved to `0°`; LCD: Not added             | Agreed                  |
-| At threshold      | `670` (T); injected software input           | `reading=670, commanded_angle=90`; servo moves to `90°`      | `reading=670, commanded_angle=90`; servo moved to `90°`; LCD: Not added           | Agreed                  |
-| Above threshold   | `671` (T + 1); injected software input       | `reading=671, commanded_angle=90`; servo stays at `90°`      | `reading=671, commanded_angle=90`; servo stayed at `90°`; LCD: Not added          | Agreed                  |
-| Bright live input | Record the light setting and observed count. |                                                              |                                                                                   |                         |
-| Live recovery     | Record the light setting and observed count. |                                                              |                                                                                   |                         |
+| Test              | Input value and source                                   | Expected command and response                                                      | Observed command, virtual response and LCD state                                                                                           | Agreement or correction |
+| ----------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
+| Below threshold   | `669` (T − 1), injected software input                   | `reading=669, commanded_angle=0`, servo moves to `0°`                              | `reading=669, commanded_angle=0`, servo moved to `0°`, LCD: Not added                                                                      | Agreed                  |
+| At threshold      | `670` (T), injected software input                       | `reading=670, commanded_angle=90`, servo moves to `90°`                            | `reading=670, commanded_angle=90`, servo moved to `90°`, LCD: Not added                                                                    | Agreed                  |
+| Above threshold   | `671` (T + 1), injected software input                   | `reading=671, commanded_angle=90`, servo stays at `90°`                            | `reading=671, commanded_angle=90`, servo stayed at `90°`, LCD: Not added                                                                   | Agreed                  |
+| Bright live input | `8318 lux` (observed count: `44`), live simulated sensor | `reading < 670`, `commanded_angle=0`, servo moves to `0°`, LCD shows `CMD:SHUT`    | `Team 9 \| reading=44, commanded_angle=0`, servo moved to `0°`, LCD showed `Team 9` / `A0: 44 CMD:SHUT` (agreed with serial and servo)     | Agreed                  |
+| Live recovery     | `3 lux` (observed count: `944`), live simulated sensor   | `reading >= 670`, `commanded_angle=90`, servo moves to `90°`, LCD shows `CMD:OPEN` | `Team 9 \| reading=944, commanded_angle=90`, servo moved to `90°`, LCD showed `Team 9` / `A0: 944 CMD:OPEN` (agreed with serial and servo) | Agreed                  |
 
 Explain one correction or limitation. Distinguish the injected tests from tests using the simulated sensor.
 
+- **Limitation:** The Wokwi simulation confirms wiring and decision logic, but it does not verify physical constraints such as servo torque, power-supply current capacity, or real mechanical movement. Moving the virtual servo does not reduce the simulated light reaching the LDR.
+- **Injected vs. simulated-sensor tests:** The injected tests (`669`, `670`, `671`) replace `analogRead(A0)` with fixed values in code and bypass the LDR, isolating and verifying the exact `if`/`else` boundary behavior at `T = 670`. The live simulated-sensor tests restore `analogRead(A0)` and move the LDR lux slider across the threshold in both directions, testing the full sensor -> ADC -> controller -> servo and I2C LCD chain.
+
 In the two live-test rows, record whether the LCD reading and command agree with the serial output and servo response. Use the handout’s [I2C explanation and connection table](https://vinuni-cecs1011.github.io/labs/lab-03.html#lcd-interface) to check the display wiring and address.
 
-Insert **one screenshot** showing the complete circuit, readable LCD and serial output during a live test. Use your actual filename, for example `![Circuit and live test](controller.png)`, and add a caption identifying the condition and response. The LCD must show your team or prototype label, current reading and commanded state. The other results belong in the table; additional screenshots are not required.
+![Circuit and live test under bright input](controller.png)
+
+_Figure 1. Live bright-input test at `8318 lux` (`reading=44 < 670`): the serial monitor reports `Team 9 | reading=44, commanded_angle=0`, the I2C LCD (`0x27`) displays `Team 9` and `A0: 44 CMD:SHUT`, and the servo on D9 moves to `0°` (closed)._
 
 ## 5. Connect to the final project
 
 In two or three sentences, describe an input → decision → output chain useful for your final project. State how the sensor and output connect to the controller, and name one physical test. Use the handout’s [project examples](https://vinuni-cecs1011.github.io/labs/lab-03.html#project-examples) for guidance. Your Lab 2 mount or enclosure may support this design.
+
+- **Answer:** For our Smart Fridge Freshness Monitor, the chain is temperature, humidity, and gas readings -> detect spoilage risk or door-open spikes -> send a mobile push alert. The temp/humidity sensor connects via I2C (SDA/SCL) and the gas sensor connects to A0 with shared power and GND, while the MCU's wireless radio outputs packets to the backend. Mounted in our Lab 2 PETG holder, one physical test is leaving the fridge door ajar to check that the wireless signal passes through the fridge wall and sends the alert.
 
 ## Source files
 
@@ -103,18 +112,16 @@ In two or three sentences, describe an input → decision → output chain usefu
 - [Circuit diagram](diagram.json).
 - [Library list](libraries.txt).
 
-Restore `int reading = analogRead(A0);` in the final program so it uses the sensor rather than a fixed test value. Check that all three files are present beside this report and that the links open. Include both Servo and LiquidCrystal I2C in the library list. Save the same final version in Wokwi, then ask another member to open the shared project link above and run it. The GitHub SHA identifies the assessed version; the Wokwi link provides a runnable copy.
-
 ## Contributions
 
 Use one row per member. Each member should commit meaningful work using their own GitHub account and explain their practice or team contribution. Prediction, coding, testing, interpretation, paired work and documentation all count when supported by evidence.
 
-| GitHub username  | Contribution and related evidence | One result or concept I can explain |
-| ---------------- | --------------------------------- | ----------------------------------- |
-| caocchinh        |                                   |                                     |
-| DUCDUCDUC38      |                                   |                                     |
-| bfhvn            |                                   |                                     |
-| phamvuminh080908 |                                   |                                     |
+| GitHub username  | Contribution and related evidence                                                                                                                                                                                 | One result or concept I can explain                                                                                                                          |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| caocchinh        | Built and exported the Wokwi controller (`sketch.ino`, `diagram.json`, `libraries.txt`), ran the boundary (`669`/`670`/`671`) and live tests with `controller.png`, and updated Sections 4, and 5 in `README.md`. | I can explain how `reading < 670` (and equality at `670`) drives the servo on D9 and I2C LCD (`0x27`), and how injected tests differ from live sensor tests. |
+| DUCDUCDUC38      |                                                                                                                                                                                                                   |                                                                                                                                                              |
+| bfhvn            |                                                                                                                                                                                                                   |                                                                                                                                                              |
+| phamvuminh080908 |                                                                                                                                                                                                                   |                                                                                                                                                              |
 
 ## Sources and AI use
 

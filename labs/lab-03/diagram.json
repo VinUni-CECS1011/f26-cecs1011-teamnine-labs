@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Team 9",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-nano",
+      "id": "nano",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -169.6,
+      "left": -8.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -126.8,
+      "left": -249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 188.8,
+      "left": 159.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    ["ldr1:VCC", "nano:5V", "red", ["h67.2", "v268.8", "h-105.1"]],
+    ["ldr1:GND", "nano:GND.1", "black", ["h57.6", "v201.2", "h-76.3"]],
+    ["ldr1:AO", "nano:A0", "green", ["h115.2", "v200.9", "h-229.9"]],
+    ["servo1:PWM", "nano:9", "green", ["h0"]],
+    ["servo1:V+", "nano:5V", "red", ["v192.1", "h365.3"]],
+    ["servo1:GND", "nano:GND.2", "black", ["h0"]],
+    ["lcd1:VCC", "nano:5V", "red", ["h0"]],
+    ["lcd1:GND", "nano:GND.2", "black", ["h134.4", "v-249.6", "h-172.3"]],
+    ["lcd1:GND", "nano:GND.1", "black", ["h0"]],
+    ["lcd1:SDA", "nano:A4", "green", ["h0"]],
+    ["lcd1:SCL", "nano:A5", "green", ["h0"]]
+  ],
+  "dependencies": {}
+}
