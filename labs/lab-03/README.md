@@ -79,13 +79,13 @@ Write predictions before running the tests. Record actual results separately and
 
 Complete the first three rows in Activity 5, before adding the LCD; record its state as “Not added.” Restore `int reading = analogRead(A0);`, then add the LCD and complete the two live-test rows in Activity 6.
 
-| Test              | Input value and source                       | Expected command and response             | Observed command, virtual response and LCD state | Agreement or correction |
-| ----------------- | -------------------------------------------- | ----------------------------------------- | ------------------------------------------------ | ----------------------- |
-| Below threshold   | T − 1; injected software input               | `TEAM 9 / reading=506, commanded_angle=0` | `TEAM 9 / reading=506, commanded_angle=0`        |                         |
-| At threshold      | T; injected software input                   |                                           |                                                  |                         |
-| Above threshold   | T + 1; injected software input               |                                           |                                                  |                         |
-| Bright live input | Record the light setting and observed count. |                                           |                                                  |                         |
-| Live recovery     | Record the light setting and observed count. |                                           |                                                  |                         |
+| Test              | Input value and source                       | Expected command and response                                | Observed command, virtual response and LCD state                                  | Agreement or correction |
+| ----------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------- | ----------------------- |
+| Below threshold   | `669` (T − 1); injected software input       | `reading=669, commanded_angle=0`; servo moves to `0°`        | `reading=669, commanded_angle=0`; servo moved to `0°`; LCD: Not added             | Agreed                  |
+| At threshold      | `670` (T); injected software input           | `reading=670, commanded_angle=90`; servo moves to `90°`      | `reading=670, commanded_angle=90`; servo moved to `90°`; LCD: Not added           | Agreed                  |
+| Above threshold   | `671` (T + 1); injected software input       | `reading=671, commanded_angle=90`; servo stays at `90°`      | `reading=671, commanded_angle=90`; servo stayed at `90°`; LCD: Not added          | Agreed                  |
+| Bright live input | Record the light setting and observed count. |                                                              |                                                                                   |                         |
+| Live recovery     | Record the light setting and observed count. |                                                              |                                                                                   |                         |
 
 Explain one correction or limitation. Distinguish the injected tests from tests using the simulated sensor.
 
