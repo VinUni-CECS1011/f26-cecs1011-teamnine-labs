@@ -33,7 +33,7 @@ Record your team's discussion in one or two sentences per question.
 
 In one sentence, describe what happened to the startup and loop messages when you ran and restarted the Activity 2 program.
 
-- **Answer:** The startup message prints `Ready`, the loop message prints `count` with its value increasing by `1` (`+= 1`) each loop, and the blink slows down from 500 ms to 1000 ms.
+- **Answer:** When the program started, `setup()` ran once to print `Ready` and `loop()` repeated to increment `count` and print `Loop 1`, `Loop 2`, `Loop 3`, …; after changing both `delay(500)` calls to `delay(1000)` and restarting, `setup()` ran once again to print `Ready`, `count` reset to `0` so the loop messages restarted at `Loop 1`, and the built-in LED flashed at half the rate (1000 ms on and 1000 ms off instead of 500 ms) because the longer software delays paused execution longer even though the processor still ran at 16 MHz.
 
 ### 1.3. Explain the connections — Activities 3 and 4
 
