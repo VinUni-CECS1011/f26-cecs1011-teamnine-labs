@@ -1,4 +1,4 @@
-# Lab 3 – THINK + ACT: Sense → Process → Act
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/369dda34-1de5-48cc-b93b-87d88ca1a6b6" /># Lab 3 – THINK + ACT: Sense → Process → Act
 
 - **Team name:** Team 9
 - **Prototype or display label:** Automatic Window Shade (`Team 9`)
@@ -120,7 +120,7 @@ Use one row per member. Each member should commit meaningful work using their ow
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | caocchinh        | Built and exported the Wokwi controller (`sketch.ino`, `diagram.json`, `libraries.txt`), ran the boundary (`669`/`670`/`671`) and live tests with `controller.png`, and updated Sections 4 and 5 in `README.md`. | I can explain how `reading < 670` (and equality at `670`) drives the servo on D9 and I2C LCD (`0x27`), and how injected tests differ from live sensor tests. |
 | DUCDUCDUC38 | Completed Section 1 of README.md and created the shared Wokwi project for Team 9’s Automatic Window Shade. Evidence: Section 1 and the Wokwi link in the report. | I explain how the Nano measures the light sensor’s voltage on A0, sends servo control pulses on D9, and uses GND as the common voltage reference. |                                                                                                                                                     |
-| bfhvn            |                                                                                                                                                                                                                  |                                                                                                                                                              |
+| bfhvn | Verified the Wokwi circuit wiring (`A0`, `D9`, I2C `0x27`), cross-checked predicted vs. observed test outputs in Section 4, and reviewed `README.md` formatting and AI verification notes. | I can explain how the I2C LCD (`SDA`/`SCL`) and serial monitor confirm synchronized sensor readings (`A0`) and servo commands (`CMD:SHUT` vs. `CMD:OPEN`). |
 | phamvuminh080908 |                                                                                                                                                                                                                  |                                                                                                                                                              |
 
 ## Sources and AI use
